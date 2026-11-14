@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="SC-FetchIP">
+  <DisplayName>SC-FetchIP</DisplayName>
+  <Request clearPayload="true" variable="ipRequest">
+    <Set>
+      <Verb>GET</Verb>
+    </Set>
+  </Request>
+  <Response>ipResponse</Response>
+  <Timeout>5000</Timeout>
+  <HTTPTargetConnection>
+    <URL>https://httpbin.org/ip</URL>
+    <Properties>
+      <Property name="success.codes">2xx</Property>
+    </Properties>
+  </HTTPTargetConnection>
+</ServiceCallout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VerifyJWT async="false" continueOnError="false" enabled="true" name="VJ-CheckJWT">
+  <DisplayName>VJ-CheckJWT</DisplayName>
+  <Algorithm>HS256</Algorithm>
+  <Source>request.header.authorization</Source>
+  <SecretKey>
+    <Value ref="private.jwt.secret"/>
+  </SecretKey>
+</VerifyJWT>

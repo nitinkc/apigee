@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ResponseCache async="false" continueOnError="false" enabled="true" name="RC-Orders">
+  <DisplayName>RC-Orders</DisplayName>
+  <CacheKey>
+    <Prefix/>
+    <KeyFragment ref="proxy.pathsuffix"/>
+  </CacheKey>
+  <ExpirySettings>
+    <TimeoutInSec>60</TimeoutInSec>
+  </ExpirySettings>
+  <SkipCacheLookup>request.header.x-no-cache Exists</SkipCacheLookup>
+  <SkipCachePopulation>response.status.code != 200</SkipCachePopulation>
+</ResponseCache>

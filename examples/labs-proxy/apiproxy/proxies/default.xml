@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+  <Description>Front door for the labs-proxy — see docs/apigee/labs/</Description>
+
+  <PreFlow name="PreFlow">
+    <Request>
+      <Step><Name>SA-Global</Name></Step>
+      <Step><Name>KVM-ReadConfig</Name></Step>
+    </Request>
+    <Response/>
+  </PreFlow>
+
+  <Flows>
+    <!-- Lab 7: CORS preflight short-circuit (edge-only RouteRule, no backend) -->
+    <Flow name="cors-preflight">
+      <Condition>(request.verb = "OPTIONS")</Condition>
+      <Request>
+        <Step><Name>AM-CORS-Preflight</Name></Step>
+      </Request>
+      <Response/>
+    </Flow>
+
+    <!-- Lab 1: open endpoint, edge-generated response -->
+    <Flow name="hello">
+      <Condition>(proxy.pathsuffix MatchesPath "/hello") and (request.verb = "GET")</Condition>
+      <Request/>
+      <Response>
+        <Step><Name>AM-Hello</Name></Step>
+      </Response>
+    </Flow>
+
+    <!-- Lab 3A: OAuth client-credentials token issuance -->
+    <Flow name="token">
+      <Condition>(proxy.pathsuffix MatchesPath "/token") and (request.verb = "POST")</Condition>
+      <Request>
+        <Step><Name>OA-IssueToken</Name></Step>
+      </Request>
+      <Response/>
+    </Flow>
+
+    <!-- Lab 3B: mint a lab JWT (HS256, secret from KVM) -->
+    <Flow name="jwt-mint">
+      <Condition>(proxy.pathsuffix MatchesPath "/jwt-mint") and (request.verb = "POST")</Condition>
+      <Request>
+        <Step><Name>GJ-MintJWT</Name></Step>
+        <Step><Name>AM-ReturnJWT</Name></Step>
+      </Request>
+      <Response/>
+    </Flow>
+
+    <!-- Lab 3B: JWT verification, then pass through to target -->
+    <Flow name="jwt-protected">
+      <Condition>(proxy.pathsuffix MatchesPath "/jwt-protected") and (request.verb = "GET")</Condition>
+      <Request>
+        <Step><Name>VJ-CheckJWT</Name></Step>
+      </Request>
+      <Response/>
+    </Flow>
+
+    <!-- Lab 3A: opaque-token verification, edge-generated response -->
+    <Flow name="secure">
+      <Condition>(proxy.pathsuffix MatchesPath "/secure") and (request.verb = "GET")</Condition>
+      <Request>
+        <Step><Name>OA-VerifyToken</Name></Step>
+        <Step><Name>AM-SecureOK</Name></Step>
+      </Request>
+      <Response/>
+    </Flow>
+
+    <!-- Labs 2/4/6: API key + quota + strip + cache + JS mediation -->
+    <Flow name="get-orders">
+      <Condition>(proxy.pathsuffix MatchesPath "/orders") and (request.verb = "GET")</Condition>
+      <Request>
+        <Step><Name>VA-CheckAPIKey</Name></Step>
+        <Step><Name>Quota-PerApp</Name></Step>
+        <Step><Name>AM-StripKey</Name></Step>
+        <Step><Name>RC-Orders</Name></Step>
+      </Request>
+      <Response>
+        <Step><Name>JS-ShapeResponse</Name></Step>
+        <Step><Name>RC-Orders</Name></Step>
+      </Response>
+    </Flow>
+
+    <!-- Lab 5: path extraction + service callout enrichment -->
+    <Flow name="get-order-by-id">
+      <Condition>(proxy.pathsuffix MatchesPath "/orders/**") and (request.verb = "GET")</Condition>
+      <Request>
+        <Step><Name>VA-CheckAPIKey</Name></Step>
+        <Step><Name>EV-ExtractPath</Name></Step>
+        <Step><Name>AM-StripKey</Name></Step>
+        <Step><Name>SC-FetchIP</Name></Step>
+      </Request>
+      <Response>
+        <Step><Name>JS-ShapeResponse</Name></Step>
+      </Response>
+    </Flow>
+
+    <!-- Labs 2/6: body validation + RaiseFault -->
+    <Flow name="create-order">
+      <Condition>(proxy.pathsuffix MatchesPath "/orders") and (request.verb = "POST")</Condition>
+      <Request>
+        <Step><Name>VA-CheckAPIKey</Name></Step>
+        <Step><Name>EV-ExtractBody</Name></Step>
+        <Step>
+          <Condition>!(request.content ~~ "(?s).*customerId.*")</Condition>
+          <Name>RF-MissingCustomer</Name>
+        </Step>
+        <Step><Name>AM-StripKey</Name></Step>
+      </Request>
+      <Response/>
+    </Flow>
+  </Flows>
+
+  <PostFlow name="PostFlow">
+    <Request/>
+    <Response>
+      <Step><Name>AM-CORS-Headers</Name></Step>
+    </Response>
+  </PostFlow>
+
+  <!-- Lab 6: normalize every fault into a consistent JSON error -->
+  <FaultRules>
+    <FaultRule name="auth-faults">
+      <Step><Name>AM-Error401</Name></Step>
+      <Condition>(fault.name = "FailedToResolveAPIKey") or
+                (fault.name = "InvalidApiKey") or
+                (fault.name = "InvalidAccessToken") or
+                (fault.name Matches "*Token*") or
+                (fault.name Matches "*Signature*") or
+                (fault.name Matches "*JWT*")</Condition>
+    </FaultRule>
+    <FaultRule name="throttled">
+      <Step><Name>AM-Error429</Name></Step>
+      <Condition>(fault.name = "QuotaViolation") or
+                (fault.name = "SpikeArrestViolation")</Condition>
+    </FaultRule>
+  </FaultRules>
+  <DefaultFaultRule name="fallback">
+    <Step><Name>AM-Error500</Name></Step>
+    <Condition>fault.name != "RaiseFault"</Condition>
+  </DefaultFaultRule>
+
+  <HTTPProxyConnection>
+    <BasePath>/labs</BasePath>
+    <VirtualHost>default</VirtualHost>
+  </HTTPProxyConnection>
+
+  <!-- First match wins: edge-only endpoints never route to the backend -->
+  <RouteRule name="edge-only">
+    <Condition>(request.verb = "OPTIONS") or
+               (proxy.pathsuffix MatchesPath "/hello") or
+               (proxy.pathsuffix MatchesPath "/token") or
+               (proxy.pathsuffix MatchesPath "/jwt-mint") or
+               (proxy.pathsuffix MatchesPath "/secure")</Condition>
+  </RouteRule>
+  <RouteRule name="default">
+    <TargetEndpoint>default</TargetEndpoint>
+  </RouteRule>
+</ProxyEndpoint>

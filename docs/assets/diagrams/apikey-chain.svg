@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 250" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arr9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6366f1"/>
+    </marker>
+    <marker id="arr9g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- product -->
+  <rect x="20" y="30" width="150" height="80" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <g transform="translate(36,44)" stroke="#4f46e5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 8 L15 0 L30 8 L15 16 Z"/>
+    <path d="M0 8 v16 l15 8 l15 -8 v-16"/>
+    <path d="M15 16 v16"/>
+  </g>
+  <text x="78" y="56" font-size="12.5" font-weight="700" fill="#1e293b">API Product</text>
+  <text x="78" y="72" font-size="10" fill="#64748b">labs-product</text>
+  <text x="78" y="86" font-size="9.5" fill="#64748b">proxies + quota scope</text>
+
+  <!-- grants access -->
+  <path d="M172 70 L196 70" stroke="#6366f1" stroke-width="2" marker-end="url(#arr9)"/>
+  <text x="184" y="62" text-anchor="middle" font-size="9" fill="#64748b">scopes</text>
+
+  <!-- app -->
+  <rect x="200" y="30" width="150" height="80" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <g transform="translate(216,44)" stroke="#7c3aed" stroke-width="2" fill="none" stroke-linecap="round">
+    <rect x="0" y="0" width="22" height="30" rx="4"/>
+    <line x1="7" y1="24" x2="15" y2="24"/>
+  </g>
+  <text x="248" y="56" font-size="12.5" font-weight="700" fill="#1e293b">App</text>
+  <text x="248" y="72" font-size="10" fill="#64748b">labs-app</text>
+  <text x="248" y="86" font-size="9.5" fill="#64748b">bound to product</text>
+
+  <!-- developer owns app -->
+  <rect x="200" y="140" width="150" height="60" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <g transform="translate(216,152)" stroke="#475569" stroke-width="2" fill="none" stroke-linecap="round">
+    <circle cx="10" cy="7" r="6"/>
+    <path d="M0 26 c0 -7 4.5 -11 10 -11 s10 4 10 11"/>
+  </g>
+  <text x="246" y="164" font-size="12" font-weight="700" fill="#1e293b">Developer</text>
+  <text x="246" y="180" font-size="9.5" fill="#64748b">you@example.com</text>
+  <path d="M275 112 L275 138" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr9)"/>
+  <text x="283" y="128" font-size="9" fill="#64748b">owns</text>
+
+  <!-- credential -->
+  <path d="M352 70 L376 70" stroke="#6366f1" stroke-width="2" marker-end="url(#arr9)"/>
+  <rect x="380" y="30" width="170" height="80" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <g transform="translate(396,44)" stroke="#b45309" stroke-width="2" fill="none" stroke-linecap="round">
+    <circle cx="9" cy="9" r="8"/>
+    <line x1="16" y1="9" x2="32" y2="9"/>
+    <line x1="26" y1="9" x2="26" y2="14"/>
+    <line x1="31" y1="9" x2="31" y2="13"/>
+  </g>
+  <text x="440" y="56" font-size="12.5" font-weight="700" fill="#1e293b">Consumer key</text>
+  <text x="440" y="72" font-size="10" fill="#64748b">+ secret — sent as</text>
+  <text x="440" y="86" font-size="10" font-family="ui-monospace, monospace" fill="#b45309">?apikey=…</text>
+
+  <!-- to policy -->
+  <path d="M552 70 L576 70" stroke="#6366f1" stroke-width="2" marker-end="url(#arr9)"/>
+
+  <!-- VerifyAPIKey -->
+  <rect x="580" y="30" width="240" height="80" rx="10" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+  <g transform="translate(596,44)" stroke="#047857" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 0 L26 5 V13 C26 22 20 27 14 30 C8 27 2 22 2 13 V5 Z"/>
+    <path d="M9 14 l4 4 l8 -9"/>
+  </g>
+  <text x="634" y="56" font-size="12.5" font-weight="700" fill="#065f46">VerifyAPIKey</text>
+  <text x="634" y="72" font-size="10" fill="#64748b">bad/missing key → 401 at edge</text>
+  <text x="634" y="86" font-size="10" fill="#64748b">valid → populates flow vars</text>
+
+  <!-- variables out -->
+  <path d="M700 112 L700 140" stroke="#059669" stroke-width="2" marker-end="url(#arr9g)"/>
+  <rect x="580" y="144" width="240" height="88" rx="10" fill="#ecfdf5" stroke="#34d399"/>
+  <text x="596" y="165" font-size="11" font-weight="700" fill="#065f46">flow variables now set:</text>
+  <g font-family="ui-monospace, monospace" font-size="10" fill="#047857">
+    <text x="596" y="184">client_id · apiproduct.name</text>
+    <text x="596" y="200">developer.email</text>
+    <text x="596" y="216">developer.app.name</text>
+  </g>
+
+  <!-- downstream use -->
+  <path d="M578 188 L556 188" stroke="#059669" stroke-width="2" marker-end="url(#arr9g)"/>
+  <rect x="380" y="150" width="170" height="76" rx="10" fill="#ffffff" stroke="#34d399" stroke-width="1.5"/>
+  <text x="465" y="172" text-anchor="middle" font-size="11.5" font-weight="700" fill="#065f46">downstream policies</text>
+  <text x="465" y="190" text-anchor="middle" font-size="10" fill="#64748b">Quota Identifier,</text>
+  <text x="465" y="204" text-anchor="middle" font-size="10" fill="#64748b">logging, JS access</text>
+
+  <!-- footer -->
+  <text x="280" y="242" text-anchor="middle" font-size="11.5" fill="#64748b">The key is only meaningful because the product defines what it unlocks and the app binds it to a developer.</text>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-ExtractPath">
+  <DisplayName>EV-ExtractPath</DisplayName>
+  <Source>request</Source>
+  <URIPath>
+    <Pattern ignoreCase="true">/orders/{orderId}</Pattern>
+  </URIPath>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

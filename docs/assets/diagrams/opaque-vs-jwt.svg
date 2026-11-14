@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 340" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arr5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- ============ LEFT: opaque token ============ -->
+  <rect x="20" y="14" width="392" height="288" rx="14" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+  <g transform="translate(40,30)" stroke="#0f766e" stroke-width="2" fill="none" stroke-linecap="round">
+    <circle cx="12" cy="12" r="11"/>
+    <line x1="12" y1="12" x2="30" y2="12"/>
+    <line x1="26" y1="12" x2="26" y2="17"/>
+    <line x1="30" y1="12" x2="30" y2="16"/>
+  </g>
+  <text x="84" y="46" font-size="15" font-weight="700" fill="#1e293b">Opaque token — OAuthV2</text>
+  <text x="84" y="64" font-size="11" fill="#64748b">random string, means nothing by itself</text>
+
+  <!-- token chip -->
+  <rect x="40" y="82" width="220" height="30" rx="15" fill="#f0fdfa" stroke="#2dd4bf"/>
+  <text x="150" y="102" text-anchor="middle" font-size="11.5" font-family="ui-monospace, monospace" fill="#0f766e">AbCdEf123…xyz</text>
+
+  <!-- every call lookup -->
+  <path d="M150 112 L150 142" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr5)"/>
+  <rect x="40" y="146" width="352" height="64" rx="8" fill="#f0fdfa" stroke="#99f6e4"/>
+  <g transform="translate(56,160)" stroke="#0f766e" stroke-width="2" fill="none">
+    <ellipse cx="11" cy="5" rx="11" ry="5"/>
+    <path d="M0 5 v14 c0 2.8 4.9 5 11 5 s11 -2.2 11 -5 v-14"/>
+    <path d="M0 12 c0 2.8 4.9 5 11 5 s11 -2.2 11 -5"/>
+  </g>
+  <text x="96" y="168" font-size="12" font-weight="700" fill="#134e4a">Each call → token store lookup</text>
+  <text x="96" y="185" font-size="10.5" fill="#0f766e">VerifyAccessToken hits Apigee's token DB</text>
+  <text x="96" y="200" font-size="10.5" fill="#0f766e">Stateful — one network hop of verification cost</text>
+
+  <!-- tradeoffs -->
+  <text x="40" y="236" font-size="11" font-weight="700" fill="#059669">+ instant revocation (delete the row)</text>
+  <text x="40" y="254" font-size="11" font-weight="700" fill="#059669">+ nothing leaks — token carries no data</text>
+  <text x="40" y="272" font-size="11" font-weight="700" fill="#e11d48">− lookup cost on every request</text>
+  <text x="40" y="290" font-size="11" fill="#64748b">Best for: third-party APIs, revocation-critical</text>
+
+  <!-- ============ RIGHT: JWT ============ -->
+  <rect x="428" y="14" width="392" height="288" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <g transform="translate(448,30)" stroke="#7c3aed" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="4" width="22" height="18" rx="3"/>
+    <path d="M4 10 h14 M4 14 h9"/>
+    <path d="M14 22 l4 4 8 -9" stroke-width="2.2"/>
+  </g>
+  <text x="486" y="46" font-size="15" font-weight="700" fill="#1e293b">JWT — GenerateJWT / VerifyJWT</text>
+  <text x="486" y="64" font-size="11" fill="#64748b">self-contained, signed claims</text>
+
+  <!-- jwt structure -->
+  <g font-family="ui-monospace, monospace" font-size="11">
+    <rect x="448" y="82" width="108" height="30" rx="6" fill="#fee2e2"/>
+    <text x="502" y="102" text-anchor="middle" fill="#b91c1c">header</text>
+    <rect x="560" y="82" width="120" height="30" rx="6" fill="#dbeafe"/>
+    <text x="620" y="102" text-anchor="middle" fill="#1d4ed8">payload · claims</text>
+    <rect x="684" y="82" width="120" height="30" rx="6" fill="#ede9fe"/>
+    <text x="744" y="102" text-anchor="middle" fill="#6d28d9">signature</text>
+  </g>
+  <text x="502" y="126" text-anchor="middle" font-size="9.5" fill="#64748b">alg, kid</text>
+  <text x="620" y="126" text-anchor="middle" font-size="9.5" fill="#64748b">sub, iss, exp, scope</text>
+  <text x="744" y="126" text-anchor="middle" font-size="9.5" fill="#64748b">sign(header.payload)</text>
+
+  <!-- verify -->
+  <path d="M620 132 L620 146" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr5)"/>
+  <rect x="448" y="150" width="352" height="60" rx="8" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <g transform="translate(464,164)" stroke="#7c3aed" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 0 L27 4 V12 C27 21 21 26 15 29 C9 26 3 21 3 12 V4 Z"/>
+    <path d="M10 14 l4 4 l8 -9"/>
+  </g>
+  <text x="508" y="172" font-size="12" font-weight="700" fill="#4c1d95">Verify signature locally — no lookup</text>
+  <text x="508" y="188" font-size="10.5" fill="#6d28d9">Claims land in flow vars: jwt.VJ-CheckJWT.claim.*</text>
+  <text x="508" y="202" font-size="10.5" fill="#6d28d9">Stateless — scales without a token store</text>
+
+  <!-- tradeoffs -->
+  <text x="448" y="236" font-size="11" font-weight="700" fill="#059669">+ zero lookup latency, verifiable offline</text>
+  <text x="448" y="254" font-size="11" font-weight="700" fill="#059669">+ claims usable in conditions (scope, exp)</text>
+  <text x="448" y="272" font-size="11" font-weight="700" fill="#e11d48">− can't revoke early — keep exp short</text>
+  <text x="448" y="290" font-size="11" fill="#64748b">Best for: service-to-service, high scale (RS256 + JWKS)</text>
+</svg>

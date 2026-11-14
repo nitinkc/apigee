@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 380" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <!-- column headers -->
+  <text x="105" y="24" text-anchor="middle" font-size="13" font-weight="600" fill="#64748b" letter-spacing="1.5">CLIENTS</text>
+  <text x="420" y="24" text-anchor="middle" font-size="13" font-weight="600" fill="#64748b" letter-spacing="1.5">APIGEE (MANAGED EDGE)</text>
+  <text x="735" y="24" text-anchor="middle" font-size="13" font-weight="600" fill="#64748b" letter-spacing="1.5">BACKENDS</text>
+
+  <!-- clients -->
+  <g>
+    <!-- mobile app -->
+    <rect x="30" y="50" width="150" height="72" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+    <g transform="translate(52,64)" stroke="#4f46e5" stroke-width="2" fill="none" stroke-linecap="round">
+      <rect x="0" y="0" width="18" height="32" rx="3.5"/>
+      <line x1="6" y1="26" x2="12" y2="26"/>
+    </g>
+    <text x="82" y="76" font-size="13" font-weight="600" fill="#1e293b">Mobile app</text>
+    <text x="82" y="94" font-size="11" fill="#64748b">iOS / Android</text>
+
+    <!-- SPA -->
+    <rect x="30" y="146" width="150" height="72" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+    <g transform="translate(50,160)" stroke="#4f46e5" stroke-width="2" fill="none" stroke-linecap="round">
+      <rect x="0" y="0" width="30" height="24" rx="3"/>
+      <line x1="0" y1="8" x2="30" y2="8"/>
+      <circle cx="5" cy="4" r="1.4" fill="#4f46e5"/>
+      <circle cx="10" cy="4" r="1.4" fill="#4f46e5"/>
+    </g>
+    <text x="92" y="172" font-size="13" font-weight="600" fill="#1e293b">SPA</text>
+    <text x="92" y="190" font-size="11" fill="#64748b">browser (CORS)</text>
+
+    <!-- partner -->
+    <rect x="30" y="242" width="150" height="72" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+    <g transform="translate(50,256)" stroke="#4f46e5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="0" y="6" width="30" height="20" rx="3"/>
+      <path d="M7 6 V4 a8 3 0 0 1 16 0 v2" />
+      <line x1="9" y1="16" x2="21" y2="16"/>
+    </g>
+    <text x="92" y="268" font-size="13" font-weight="600" fill="#1e293b">Partner svc</text>
+    <text x="92" y="286" font-size="11" fill="#64748b">server-to-server</text>
+  </g>
+
+  <!-- apigee proxy -->
+  <rect x="280" y="42" width="280" height="280" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="280" y="42" width="280" height="44" rx="14" fill="#4f46e5"/>
+  <rect x="280" y="72" width="280" height="14" fill="#4f46e5"/>
+  <text x="420" y="70" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">API Proxy — labs-proxy</text>
+
+  <!-- policy lanes -->
+  <g>
+    <rect x="298" y="100" width="244" height="62" rx="8" fill="#eef2ff" stroke="#c7d2fe"/>
+    <g transform="translate(314,116)" stroke="#4f46e5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 0 L26 5 V14 C26 24 20 30 14 33 C8 30 2 24 2 14 V5 Z"/>
+      <path d="M9 15 l4 4 l8 -9"/>
+    </g>
+    <text x="356" y="124" font-size="13" font-weight="600" fill="#1e293b">Security</text>
+    <text x="356" y="141" font-size="11" fill="#64748b">VerifyAPIKey · OAuthV2 · JWT</text>
+    <text x="356" y="155" font-size="11" fill="#64748b">who are you?</text>
+
+    <rect x="298" y="174" width="244" height="62" rx="8" fill="#fef3c7" stroke="#fcd34d"/>
+    <g transform="translate(314,190)" stroke="#b45309" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M2 22 a13 13 0 1 1 26 0"/>
+      <line x1="15" y1="22" x2="22" y2="9"/>
+      <circle cx="15" cy="22" r="2" fill="#b45309"/>
+    </g>
+    <text x="356" y="198" font-size="13" font-weight="600" fill="#1e293b">Traffic</text>
+    <text x="356" y="215" font-size="11" fill="#64748b">Quota · SpikeArrest · Cache</text>
+    <text x="356" y="229" font-size="11" fill="#64748b">how much, how fast?</text>
+
+    <rect x="298" y="248" width="244" height="62" rx="8" fill="#ecfdf5" stroke="#a7f3d0"/>
+    <g transform="translate(314,264)" stroke="#047857" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 8 h16 l-5 -5 M20 8 l-5 5"/>
+      <path d="M26 24 h-16 l5 -5 M10 24 l5 5"/>
+    </g>
+    <text x="356" y="272" font-size="13" font-weight="600" fill="#1e293b">Mediation</text>
+    <text x="356" y="289" font-size="11" fill="#64748b">AssignMessage · JS · Callout</text>
+    <text x="356" y="303" font-size="11" fill="#64748b">reshape in flight</text>
+  </g>
+
+  <!-- backends -->
+  <g>
+    <rect x="660" y="50" width="150" height="72" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+    <g transform="translate(680,64)" stroke="#475569" stroke-width="2" fill="none">
+      <ellipse cx="13" cy="6" rx="13" ry="6"/>
+      <path d="M0 6 v16 c0 3.3 5.8 6 13 6 s13 -2.7 13 -6 v-16"/>
+    </g>
+    <text x="712" y="76" font-size="13" font-weight="600" fill="#1e293b">Orders svc</text>
+    <text x="712" y="94" font-size="11" fill="#64748b">mock target</text>
+
+    <rect x="660" y="146" width="150" height="72" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+    <g transform="translate(682,160)" stroke="#475569" stroke-width="2" fill="none" stroke-linecap="round">
+      <rect x="0" y="0" width="26" height="30" rx="3"/>
+      <line x1="5" y1="7" x2="21" y2="7"/>
+      <line x1="5" y1="12" x2="21" y2="12"/>
+      <line x1="5" y1="17" x2="14" y2="17"/>
+    </g>
+    <text x="718" y="172" font-size="13" font-weight="600" fill="#1e293b">Legacy SOAP</text>
+    <text x="718" y="190" font-size="11" fill="#64748b">XML backend</text>
+
+    <rect x="660" y="242" width="150" height="72" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+    <g transform="translate(682,254)" stroke="#475569" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="14" cy="16" r="13"/>
+      <path d="M1 16 h26 M14 3 c-4 4 -4 22 0 26 c4 -4 4 -22 0 -26"/>
+    </g>
+    <text x="714" y="268" font-size="13" font-weight="600" fill="#1e293b">3rd-party API</text>
+    <text x="714" y="286" font-size="11" fill="#64748b">external</text>
+  </g>
+
+  <!-- arrows clients -> proxy -->
+  <g stroke="#6366f1" stroke-width="2" fill="none">
+    <path d="M182 86 C 225 86 235 150 276 160" marker-end="url(#arr)"/>
+    <path d="M182 182 L 276 182" marker-end="url(#arr)"/>
+    <path d="M182 278 C 225 278 235 210 276 205" marker-end="url(#arr)"/>
+  </g>
+  <!-- arrows proxy -> backends -->
+  <g stroke="#6366f1" stroke-width="2" fill="none">
+    <path d="M562 160 C 605 150 615 86 656 86" marker-end="url(#arr)"/>
+    <path d="M562 182 L 656 182" marker-end="url(#arr)"/>
+    <path d="M562 205 C 605 210 615 278 656 278" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- footer note -->
+  <text x="420" y="352" text-anchor="middle" font-size="12" fill="#64748b">One front door for every client — cross-cutting concerns live at the edge, not in each backend.</text>
+  <text x="420" y="370" text-anchor="middle" font-size="12" fill="#64748b">Backends see Apigee, never the client directly.</text>
+</svg>

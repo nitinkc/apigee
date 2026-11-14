@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Error401">
+  <DisplayName>AM-Error401</DisplayName>
+  <Set>
+    <Headers>
+      <Header name="Access-Control-Allow-Origin">{kvm.cors.origin}</Header>
+    </Headers>
+    <Payload contentType="application/json">
+      {"error": {"code": "UNAUTHORIZED", "message": "valid credentials required", "fault": "{fault.name}"}}
+    </Payload>
+    <StatusCode>401</StatusCode>
+  </Set>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  <AssignTo createNew="false" type="response">response</AssignTo>
+</AssignMessage>

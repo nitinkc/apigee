@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<defs>
+<marker id="ai" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6366f1"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#059669"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e11d48"/></marker>
+<marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/></marker>
+</defs>
+<rect width="960" height="470" fill="#ffffff" rx="12"/>
+<text x="480" y="28" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle" >The policy map — five families, one file per policy</text>
+<rect x="20" y="50" width="180" height="380" rx="12" fill="#fff" stroke="#4f46e5" stroke-width="2"/>
+<path d="M20,62 a12,12 0 0 1 12,-12 h156 a12,12 0 0 1 12,12 v14 h-180 z" fill="#4f46e5"/>
+<text x="34" y="69" font-size="13" font-weight="700" fill="#fff" text-anchor="start" >Security</text>
+<text x="110.0" y="86" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle" >“who are you?”</text>
+<rect x="30" y="102" width="160" height="42" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="110.0" y="121" font-size="10.8" font-weight="700" fill="#3730a3" text-anchor="middle" >VerifyAPIKey</text>
+<text x="110.0" y="136" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 2</text>
+<rect x="30" y="152" width="160" height="42" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="110.0" y="171" font-size="10.8" font-weight="700" fill="#3730a3" text-anchor="middle" >OAuthV2</text>
+<text x="110.0" y="186" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 3</text>
+<rect x="30" y="202" width="160" height="42" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="110.0" y="221" font-size="10.8" font-weight="700" fill="#3730a3" text-anchor="middle" >GenerateJWT</text>
+<text x="110.0" y="236" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 3</text>
+<rect x="30" y="252" width="160" height="42" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="110.0" y="271" font-size="10.8" font-weight="700" fill="#3730a3" text-anchor="middle" >VerifyJWT</text>
+<text x="110.0" y="286" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 3</text>
+<rect x="30" y="302" width="160" height="42" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="110.0" y="321" font-size="9.6" font-weight="700" fill="#3730a3" text-anchor="middle" >BasicAuthentication</text>
+<text x="110.0" y="336" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >cookbook</text>
+<rect x="30" y="352" width="160" height="42" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="110.0" y="371" font-size="9.6" font-weight="700" fill="#3730a3" text-anchor="middle" >JSONThreatProtection</text>
+<text x="110.0" y="386" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >advanced</text>
+<rect x="210" y="50" width="180" height="380" rx="12" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+<path d="M210,62 a12,12 0 0 1 12,-12 h156 a12,12 0 0 1 12,12 v14 h-180 z" fill="#f59e0b"/>
+<text x="224" y="69" font-size="13" font-weight="700" fill="#fff" text-anchor="start" >Traffic</text>
+<text x="300.0" y="86" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle" >“how much?”</text>
+<rect x="220" y="102" width="160" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+<text x="300.0" y="121" font-size="10.8" font-weight="700" fill="#92400e" text-anchor="middle" >SpikeArrest</text>
+<text x="300.0" y="136" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 4</text>
+<rect x="220" y="152" width="160" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+<text x="300.0" y="171" font-size="10.8" font-weight="700" fill="#92400e" text-anchor="middle" >Quota</text>
+<text x="300.0" y="186" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 4</text>
+<rect x="220" y="202" width="160" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+<text x="300.0" y="221" font-size="9.6" font-weight="700" fill="#92400e" text-anchor="middle" >ConcurrentRateLimit</text>
+<text x="300.0" y="236" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >cookbook</text>
+<rect x="400" y="50" width="180" height="380" rx="12" fill="#fff" stroke="#059669" stroke-width="2"/>
+<path d="M400,62 a12,12 0 0 1 12,-12 h156 a12,12 0 0 1 12,12 v14 h-180 z" fill="#059669"/>
+<text x="414" y="69" font-size="13" font-weight="700" fill="#fff" text-anchor="start" >Mediation</text>
+<text x="490.0" y="86" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle" >“reshape it”</text>
+<rect x="410" y="102" width="160" height="42" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+<text x="490.0" y="121" font-size="10.8" font-weight="700" fill="#065f46" text-anchor="middle" >AssignMessage</text>
+<text x="490.0" y="136" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Labs 1,2,7</text>
+<rect x="410" y="152" width="160" height="42" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+<text x="490.0" y="171" font-size="10.8" font-weight="700" fill="#065f46" text-anchor="middle" >ExtractVariables</text>
+<text x="490.0" y="186" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 5</text>
+<rect x="410" y="202" width="160" height="42" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+<text x="490.0" y="221" font-size="10.8" font-weight="700" fill="#065f46" text-anchor="middle" >JavaScript</text>
+<text x="490.0" y="236" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 5</text>
+<rect x="410" y="252" width="160" height="42" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+<text x="490.0" y="271" font-size="10.8" font-weight="700" fill="#065f46" text-anchor="middle" >ServiceCallout</text>
+<text x="490.0" y="286" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 5</text>
+<rect x="410" y="302" width="160" height="42" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+<text x="490.0" y="321" font-size="9.6" font-weight="700" fill="#065f46" text-anchor="middle" >JSONtoXML / XMLtoJSON</text>
+<text x="490.0" y="336" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 5</text>
+<rect x="590" y="50" width="180" height="380" rx="12" fill="#fff" stroke="#e11d48" stroke-width="2"/>
+<path d="M590,62 a12,12 0 0 1 12,-12 h156 a12,12 0 0 1 12,12 v14 h-180 z" fill="#e11d48"/>
+<text x="604" y="69" font-size="13" font-weight="700" fill="#fff" text-anchor="start" >Resilience</text>
+<text x="680.0" y="86" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle" >“when it breaks”</text>
+<rect x="600" y="102" width="160" height="42" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+<text x="680.0" y="121" font-size="10.8" font-weight="700" fill="#9f1239" text-anchor="middle" >ResponseCache</text>
+<text x="680.0" y="136" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 6</text>
+<rect x="600" y="152" width="160" height="42" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+<text x="680.0" y="171" font-size="10.8" font-weight="700" fill="#9f1239" text-anchor="middle" >RaiseFault</text>
+<text x="680.0" y="186" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 6</text>
+<rect x="600" y="202" width="160" height="42" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+<text x="680.0" y="221" font-size="10.8" font-weight="700" fill="#9f1239" text-anchor="middle" >FaultRules</text>
+<text x="680.0" y="236" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 6</text>
+<rect x="600" y="252" width="160" height="42" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+<text x="680.0" y="271" font-size="9.6" font-weight="700" fill="#9f1239" text-anchor="middle" >KeyValueMapOperations</text>
+<text x="680.0" y="286" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Lab 7</text>
+<rect x="780" y="50" width="180" height="380" rx="12" fill="#fff" stroke="#0284c7" stroke-width="2"/>
+<path d="M780,62 a12,12 0 0 1 12,-12 h156 a12,12 0 0 1 12,12 v14 h-180 z" fill="#0284c7"/>
+<text x="794" y="69" font-size="13" font-weight="700" fill="#fff" text-anchor="start" >Operations</text>
+<text x="870.0" y="86" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle" >“see &amp; measure”</text>
+<rect x="790" y="102" width="160" height="42" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/>
+<text x="870.0" y="121" font-size="10.8" font-weight="700" fill="#075985" text-anchor="middle" >MessageLogging</text>
+<text x="870.0" y="136" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >cookbook</text>
+<rect x="790" y="152" width="160" height="42" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/>
+<text x="870.0" y="171" font-size="9.6" font-weight="700" fill="#075985" text-anchor="middle" >StatisticsCollector</text>
+<text x="870.0" y="186" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >cookbook</text>
+<rect x="790" y="202" width="160" height="42" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/>
+<text x="870.0" y="221" font-size="10.8" font-weight="700" fill="#075985" text-anchor="middle" >FlowCallout</text>
+<text x="870.0" y="236" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >advanced</text>
+<rect x="790" y="252" width="160" height="42" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/>
+<text x="870.0" y="271" font-size="10.8" font-weight="700" fill="#075985" text-anchor="middle" >Trace / Debug</text>
+<text x="870.0" y="286" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="middle" >Debugging</text>
+<text x="480" y="454" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle" >Pick the family first, then the policy: that is how you read any proxy you did not write.</text>
+</svg>

@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<defs>
+<marker id="ai" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6366f1"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#059669"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e11d48"/></marker>
+<marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/></marker>
+</defs>
+<rect width="960" height="640" fill="#ffffff" rx="12"/>
+<text x="480" y="28" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle" >labs-proxy at a glance — every flow, every policy, in execution order</text>
+<rect x="30" y="40" width="86" height="18" rx="9" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.2"/>
+<text x="73.0" y="53.0" font-size="10" font-weight="600" fill="#3730a3" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">security</text>
+<rect x="124" y="40" width="86" height="18" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+<text x="167.0" y="53.0" font-size="10" font-weight="600" fill="#92400e" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">traffic</text>
+<rect x="218" y="40" width="86" height="18" rx="9" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="261.0" y="53.0" font-size="10" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">mediation</text>
+<rect x="312" y="40" width="86" height="18" rx="9" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.2"/>
+<text x="355.0" y="53.0" font-size="10" font-weight="600" fill="#075985" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">cache</text>
+<rect x="406" y="40" width="86" height="18" rx="9" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="449.0" y="53.0" font-size="10" font-weight="600" fill="#5b21b6" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">config</text>
+<rect x="500" y="40" width="86" height="18" rx="9" fill="#fff1f2" stroke="#e11d48" stroke-width="1.2"/>
+<text x="543.0" y="53.0" font-size="10" font-weight="600" fill="#9f1239" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">fault</text>
+<text x="930" y="53" font-size="10" font-weight="500" fill="#64748b" text-anchor="end" >dashed = edge-only (no backend call)</text>
+<rect x="20" y="70" width="920" height="38" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="32" y="87" font-size="12" font-weight="700" fill="#334155" text-anchor="start" >PreFlow</text>
+<text x="32" y="101" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">every request</text>
+<rect x="200" y="78" width="73.80000000000001" height="22" rx="11" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+<text x="236.9" y="93.0" font-size="10.5" font-weight="600" fill="#92400e" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">SA-Global</text>
+<text x="276.8" y="93" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="284.8" y="78" width="104.8" height="22" rx="11" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="337.2" y="93.0" font-size="10.5" font-weight="600" fill="#5b21b6" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">KVM-ReadConfig</text>
+<rect x="20" y="114" width="920" height="38" rx="8" fill="#fff" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="32" y="131" font-size="12" font-weight="700" fill="#5b21b6" text-anchor="start" >cors-preflight</text>
+<text x="32" y="145" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">OPTIONS</text>
+<rect x="200" y="122" width="123.4" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="261.7" y="137.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">AM-CORS-Preflight</text>
+<rect x="20" y="158" width="920" height="38" rx="8" fill="#fff" stroke="#059669" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="32" y="175" font-size="12" font-weight="700" fill="#065f46" text-anchor="start" >hello</text>
+<text x="32" y="189" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">GET /hello</text>
+<rect x="200" y="166" width="67.6" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="233.8" y="181.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">AM-Hello</text>
+<rect x="20" y="202" width="920" height="38" rx="8" fill="#fff" stroke="#4f46e5" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="32" y="219" font-size="12" font-weight="700" fill="#3730a3" text-anchor="start" >token</text>
+<text x="32" y="233" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">POST /token</text>
+<rect x="200" y="210" width="98.60000000000001" height="22" rx="11" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.2"/>
+<text x="249.3" y="225.0" font-size="10.5" font-weight="600" fill="#3730a3" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">OA-IssueToken</text>
+<rect x="20" y="246" width="920" height="38" rx="8" fill="#fff" stroke="#4f46e5" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="32" y="263" font-size="12" font-weight="700" fill="#3730a3" text-anchor="start" >jwt-mint</text>
+<text x="32" y="277" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">POST /jwt-mint</text>
+<rect x="200" y="254" width="80.0" height="22" rx="11" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.2"/>
+<text x="240.0" y="269.0" font-size="10.5" font-weight="600" fill="#3730a3" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">GJ-MintJWT</text>
+<text x="283.0" y="269" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="291.0" y="254" width="92.4" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="337.2" y="269.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">AM-ReturnJWT</text>
+<rect x="20" y="290" width="920" height="38" rx="8" fill="#fff" stroke="#4f46e5" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="32" y="307" font-size="12" font-weight="700" fill="#3730a3" text-anchor="start" >secure</text>
+<text x="32" y="321" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">GET /secure</text>
+<rect x="200" y="298" width="104.8" height="22" rx="11" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.2"/>
+<text x="252.4" y="313.0" font-size="10.5" font-weight="600" fill="#3730a3" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">OA-VerifyToken</text>
+<text x="307.8" y="313" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="315.8" y="298" width="86.2" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="358.90000000000003" y="313.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">AM-SecureOK</text>
+<rect x="20" y="334" width="920" height="38" rx="8" fill="#fff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="32" y="351" font-size="12" font-weight="700" fill="#3730a3" text-anchor="start" >jwt-protected</text>
+<text x="32" y="365" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">GET /jwt-protected</text>
+<rect x="200" y="342" width="86.2" height="22" rx="11" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.2"/>
+<text x="243.1" y="357.0" font-size="10.5" font-weight="600" fill="#3730a3" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">VJ-CheckJWT</text>
+<rect x="20" y="378" width="920" height="38" rx="8" fill="#fff" stroke="#0284c7" stroke-width="1.5"/>
+<text x="32" y="395" font-size="12" font-weight="700" fill="#075985" text-anchor="start" >get-orders</text>
+<text x="32" y="409" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">GET /orders</text>
+<rect x="200" y="386" width="104.8" height="22" rx="11" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.2"/>
+<text x="252.4" y="401.0" font-size="10.5" font-weight="600" fill="#3730a3" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">VA-CheckAPIKey</text>
+<text x="307.8" y="401" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="315.8" y="386" width="92.4" height="22" rx="11" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+<text x="362.0" y="401.0" font-size="10.5" font-weight="600" fill="#92400e" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Quota-PerApp</text>
+<text x="411.20000000000005" y="401" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="419.20000000000005" y="386" width="86.2" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="462.30000000000007" y="401.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">AM-StripKey</text>
+<text x="508.40000000000003" y="401" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="516.4000000000001" y="386" width="73.80000000000001" height="22" rx="11" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.2"/>
+<text x="553.3000000000001" y="401.0" font-size="10.5" font-weight="600" fill="#075985" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">RC-Orders</text>
+<text x="605.2" y="401" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="start" >→ target →</text>
+<rect x="681.2" y="386" width="117.2" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="739.8000000000001" y="401.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">JS-ShapeResponse</text>
+<text x="801.4000000000001" y="401" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="809.4000000000001" y="386" width="73.80000000000001" height="22" rx="11" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.2"/>
+<text x="846.3000000000001" y="401.0" font-size="10.5" font-weight="600" fill="#075985" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">RC-Orders</text>
+<rect x="20" y="422" width="920" height="38" rx="8" fill="#fff" stroke="#059669" stroke-width="1.5"/>
+<text x="32" y="439" font-size="12" font-weight="700" fill="#065f46" text-anchor="start" >get-order-by-id</text>
+<text x="32" y="453" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">GET /orders/**</text>
+<rect x="200" y="430" width="104.8" height="22" rx="11" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.2"/>
+<text x="252.4" y="445.0" font-size="10.5" font-weight="600" fill="#3730a3" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">VA-CheckAPIKey</text>
+<text x="307.8" y="445" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="315.8" y="430" width="104.8" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="368.2" y="445.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">EV-ExtractPath</text>
+<text x="423.6" y="445" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="431.6" y="430" width="86.2" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="474.70000000000005" y="445.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">AM-StripKey</text>
+<text x="520.8000000000001" y="445" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="528.8000000000001" y="430" width="80.0" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="568.8000000000001" y="445.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">SC-FetchIP</text>
+<text x="611.8000000000001" y="445" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<text x="623.8000000000001" y="445" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="start" >→ target →</text>
+<rect x="699.8000000000001" y="430" width="117.2" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="758.4000000000001" y="445.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">JS-ShapeResponse</text>
+<rect x="20" y="466" width="920" height="38" rx="8" fill="#fff" stroke="#e11d48" stroke-width="1.5"/>
+<text x="32" y="483" font-size="12" font-weight="700" fill="#9f1239" text-anchor="start" >create-order</text>
+<text x="32" y="497" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">POST /orders</text>
+<rect x="200" y="474" width="104.8" height="22" rx="11" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.2"/>
+<text x="252.4" y="489.0" font-size="10.5" font-weight="600" fill="#3730a3" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">VA-CheckAPIKey</text>
+<text x="307.8" y="489" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="315.8" y="474" width="104.8" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="368.2" y="489.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">EV-ExtractBody</text>
+<text x="423.6" y="489" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="431.6" y="474" width="129.60000000000002" height="22" rx="11" fill="#fff1f2" stroke="#e11d48" stroke-width="1.2"/>
+<text x="496.40000000000003" y="489.0" font-size="10.5" font-weight="600" fill="#9f1239" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">RF-MissingCustomer</text>
+<text x="564.2" y="489" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="572.2" y="474" width="86.2" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="615.3000000000001" y="489.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">AM-StripKey</text>
+<rect x="20" y="510" width="920" height="38" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="32" y="527" font-size="12" font-weight="700" fill="#334155" text-anchor="start" >PostFlow</text>
+<text x="32" y="541" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">every response</text>
+<rect x="200" y="518" width="111.0" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="255.5" y="533.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">AM-CORS-Headers</text>
+<rect x="20" y="554" width="920" height="38" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="32" y="571" font-size="12" font-weight="700" fill="#334155" text-anchor="start" >FaultRules</text>
+<text x="32" y="585" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">on any error</text>
+<rect x="200" y="562" width="86.2" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="243.1" y="577.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">AM-Error401</text>
+<text x="289.2" y="577" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="297.2" y="562" width="86.2" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="340.3" y="577.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">AM-Error429</text>
+<text x="386.4" y="577" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="start" >›</text>
+<rect x="394.4" y="562" width="86.2" height="22" rx="11" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+<text x="437.5" y="577.0" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">AM-Error500</text>
+<text x="32" y="612" font-size="10.5" font-weight="400" fill="#64748b" text-anchor="start" >* RF-MissingCustomer is a conditional step: it runs only when the body has no "customerId".</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<defs>
+<marker id="ai" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6366f1"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#059669"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e11d48"/></marker>
+<marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/></marker>
+</defs>
+<rect width="880" height="470" fill="#ffffff" rx="12"/>
+<text x="440" y="28" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle" >How Apigee is organised: Organization → Environment Group → Environment</text>
+<rect x="16" y="44" width="848" height="410" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="32" y="66" font-size="11" font-weight="700" fill="#334155" text-anchor="start" >ORGANIZATION  (my-org  =  your GCP project)</text>
+<rect x="30" y="190" width="100" height="90" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="80" y="228" font-size="13" font-weight="700" fill="#3730a3" text-anchor="middle" >Client</text>
+<text x="80" y="246" font-size="10.5" font-weight="400" fill="#64748b" text-anchor="middle" >curl / app</text>
+<path d="M132,235 L200,235" stroke="#6366f1" stroke-width="2" marker-end="url(#ai)" fill="none"/>
+<text x="166" y="224" font-size="9.5" font-weight="600" fill="#4f46e5" text-anchor="middle" >HTTPS</text>
+<rect x="204" y="84" width="220" height="150" rx="12" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+<path d="M204,96 a12,12 0 0 1 12,-12 h196 a12,12 0 0 1 12,12 v14 h-220 z" fill="#f59e0b"/>
+<text x="218" y="103" font-size="13" font-weight="700" fill="#fff" text-anchor="start" >Environment Group</text>
+<text x="410" y="103" font-size="10.5" font-weight="400" fill="#e0e7ff" text-anchor="end" >routing</text>
+<text x="218" y="128" font-size="13" font-weight="700" fill="#92400e" text-anchor="start" >eval-group</text>
+<text x="218" y="148" font-size="9.5" font-weight="400" fill="#92400e" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">eval-group.my-org.apigee.net</text>
+<text x="218" y="172" font-size="10.5" font-weight="400" fill="#78350f" text-anchor="start" >• owns the public hostname(s)</text>
+<text x="218" y="188" font-size="10.5" font-weight="400" fill="#78350f" text-anchor="start" >• maps host + basepath → proxy</text>
+<text x="218" y="204" font-size="10.5" font-weight="400" fill="#78350f" text-anchor="start" >• one group → 1..n environments</text>
+<text x="218" y="220" font-size="10.5" font-weight="400" fill="#78350f" text-anchor="start" >• TLS cert lives on the host</text>
+<path d="M424,160 L480,160" stroke="#f59e0b" stroke-width="2" marker-end="url(#aa)" fill="none"/>
+<rect x="484" y="84" width="364" height="230" rx="12" fill="#fff" stroke="#059669" stroke-width="2"/>
+<path d="M484,96 a12,12 0 0 1 12,-12 h340 a12,12 0 0 1 12,12 v14 h-364 z" fill="#059669"/>
+<text x="498" y="103" font-size="13" font-weight="700" fill="#fff" text-anchor="start" >Environment</text>
+<text x="834" y="103" font-size="10.5" font-weight="400" fill="#e0e7ff" text-anchor="end" >runtime sandbox: dev / stage / prod / eval</text>
+<rect x="500" y="126" width="160" height="70" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="512" y="146" font-size="11.5" font-weight="700" fill="#3730a3" text-anchor="start" >API proxy: labs-proxy</text>
+<rect x="512" y="154" width="86" height="18" rx="9" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.2"/>
+<text x="555.0" y="167.0" font-size="10" font-weight="600" fill="#3730a3" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">revision 7</text>
+<text x="512" y="188" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" >immutable bundle, deployed</text>
+<rect x="672" y="126" width="160" height="70" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="684" y="146" font-size="11.5" font-weight="700" fill="#5b21b6" text-anchor="start" >KVM: labs-config</text>
+<text x="684" y="164" font-size="9.5" font-weight="400" fill="#6b21a8" text-anchor="start" >cors.origin, jwt.secret</text>
+<text x="684" y="178" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" >env-scoped config</text>
+<rect x="500" y="208" width="160" height="64" rx="10" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/>
+<text x="512" y="228" font-size="11.5" font-weight="700" fill="#075985" text-anchor="start" >Target servers</text>
+<text x="512" y="246" font-size="9.5" font-weight="400" fill="#0c4a6e" text-anchor="start" >orders-backend → host:port</text>
+<text x="512" y="260" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" >differs per env</text>
+<rect x="672" y="208" width="160" height="64" rx="10" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+<text x="684" y="228" font-size="11.5" font-weight="700" fill="#9f1239" text-anchor="start" >Caches &amp; flow hooks</text>
+<text x="684" y="246" font-size="9.5" font-weight="400" fill="#9f1239" text-anchor="start" >ResponseCache storage</text>
+<text x="684" y="260" font-size="9.5" font-weight="400" fill="#64748b" text-anchor="start" >per-env, not shared</text>
+<text x="500" y="296" font-size="10.5" font-weight="600" fill="#065f46" text-anchor="start" >Same revision runs in every env — only this box differs.</text>
+<rect x="204" y="338" width="644" height="100" rx="12" fill="#fff" stroke="#4f46e5" stroke-width="2"/>
+<path d="M204,350 a12,12 0 0 1 12,-12 h620 a12,12 0 0 1 12,12 v14 h-644 z" fill="#4f46e5"/>
+<text x="218" y="357" font-size="13" font-weight="700" fill="#fff" text-anchor="start" >Org-wide objects (shared by every environment)</text>
+<text x="834" y="357" font-size="10.5" font-weight="400" fill="#e0e7ff" text-anchor="end" >control plane</text>
+<rect x="216" y="376" width="118" height="52" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="275" y="396" font-size="10.5" font-weight="700" fill="#3730a3" text-anchor="middle" >API Product</text>
+<text x="275" y="414" font-size="8.8" font-weight="400" fill="#64748b" text-anchor="middle" >bundle of proxies + quota</text>
+<rect x="342" y="376" width="118" height="52" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="401" y="396" font-size="10.5" font-weight="700" fill="#3730a3" text-anchor="middle" >Developer</text>
+<text x="401" y="414" font-size="8.8" font-weight="400" fill="#64748b" text-anchor="middle" >owner of apps</text>
+<rect x="468" y="376" width="118" height="52" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="527" y="396" font-size="10.5" font-weight="700" fill="#3730a3" text-anchor="middle" >App</text>
+<text x="527" y="414" font-size="8.8" font-weight="400" fill="#64748b" text-anchor="middle" >holds credentials</text>
+<rect x="594" y="376" width="118" height="52" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="653" y="396" font-size="10.5" font-weight="700" fill="#3730a3" text-anchor="middle" >Consumer key/secret</text>
+<text x="653" y="414" font-size="8.8" font-weight="400" fill="#64748b" text-anchor="middle" >what clients send</text>
+<rect x="720" y="376" width="118" height="52" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="779" y="396" font-size="10.5" font-weight="700" fill="#5b21b6" text-anchor="middle" >Org KVM / keystores</text>
+<text x="779" y="414" font-size="8.8" font-weight="400" fill="#64748b" text-anchor="middle" >global config</text>
+<text x="30" y="330" font-size="10.5" font-weight="700" fill="#334155" text-anchor="start" >Products and apps</text>
+<text x="30" y="346" font-size="10.5" font-weight="400" fill="#475569" text-anchor="start" >are defined once at</text>
+<text x="30" y="362" font-size="10.5" font-weight="400" fill="#475569" text-anchor="start" >org level, then</text>
+<text x="30" y="378" font-size="10.5" font-weight="400" fill="#475569" text-anchor="start" >enabled per env.</text>
+<path d="M120,386 L200,388" stroke="#94a3b8" stroke-width="2" marker-end="url(#as)" fill="none"/>
+</svg>

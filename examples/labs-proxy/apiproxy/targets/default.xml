@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+  <Description>Public Apigee mock target — echoes requests. Swap for your backend.</Description>
+  <HTTPTargetConnection>
+    <URL>https://mocktarget.apigee.net</URL>
+    <Properties>
+      <Property name="success.codes">2xx</Property>
+    </Properties>
+  </HTTPTargetConnection>
+</TargetEndpoint>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GenerateJWT async="false" continueOnError="false" enabled="true" name="GJ-MintJWT">
+  <DisplayName>GJ-MintJWT</DisplayName>
+  <Algorithm>HS256</Algorithm>
+  <SecretKey>
+    <Value ref="private.jwt.secret"/>
+  </SecretKey>
+  <ExpiresIn>10m</ExpiresIn>
+  <Issuer>labs-proxy</Issuer>
+  <Subject>labs-user</Subject>
+  <OutputVariable>generated_jwt</OutputVariable>
+</GenerateJWT>

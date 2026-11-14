@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 300" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arr6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6366f1"/>
+    </marker>
+    <marker id="arr6g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- request lane label -->
+  <rect x="20" y="96" width="70" height="34" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="55" y="118" text-anchor="middle" font-size="11.5" font-weight="600" fill="#1e293b">request</text>
+  <path d="M92 113 L116 113" stroke="#6366f1" stroke-width="2" marker-end="url(#arr6)"/>
+
+  <!-- stage 1: ExtractVariables -->
+  <rect x="120" y="58" width="180" height="110" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <g transform="translate(136,72)" stroke="#4f46e5" stroke-width="2" fill="none" stroke-linecap="round">
+    <circle cx="10" cy="10" r="9"/>
+    <line x1="17" y1="17" x2="25" y2="25"/>
+  </g>
+  <text x="172" y="88" font-size="12.5" font-weight="700" fill="#1e293b">ExtractVariables</text>
+  <text x="136" y="116" font-size="10" fill="#64748b">pull fields into flow vars:</text>
+  <text x="136" y="132" font-size="10" font-family="ui-monospace, monospace" fill="#4f46e5">/orders/{orderId}</text>
+  <text x="136" y="148" font-size="10" font-family="ui-monospace, monospace" fill="#4f46e5">$.customer.id</text>
+  <text x="136" y="162" font-size="9.5" fill="#64748b">→ conditions branch on them</text>
+
+  <path d="M302 113 L326 113" stroke="#6366f1" stroke-width="2" marker-end="url(#arr6)"/>
+
+  <!-- stage 2: ServiceCallout -->
+  <rect x="330" y="58" width="180" height="110" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <g transform="translate(346,72)" stroke="#b45309" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 20 L20 4"/>
+    <path d="M20 4 l4 4 M20 4 l-4 -1"/>
+    <circle cx="23" cy="9" r="3"/>
+    <path d="M4 20 l-1 4 M4 20 l4 -1" transform="rotate(45 12 12)"/>
+  </g>
+  <text x="382" y="88" font-size="12.5" font-weight="700" fill="#1e293b">ServiceCallout</text>
+  <text x="346" y="116" font-size="10" fill="#64748b">sync side call mid-flow:</text>
+  <text x="346" y="132" font-size="10" font-family="ui-monospace, monospace" fill="#b45309">GET httpbin.org/ip</text>
+  <text x="346" y="148" font-size="10" fill="#64748b">result → ipResponse.content</text>
+  <text x="346" y="162" font-size="9.5" fill="#b45309">blocking — budget its latency</text>
+
+  <path d="M512 113 L536 113" stroke="#6366f1" stroke-width="2" marker-end="url(#arr6)"/>
+
+  <!-- backend -->
+  <rect x="540" y="58" width="120" height="110" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <g transform="translate(578,76)" stroke="#475569" stroke-width="2" fill="none">
+    <ellipse cx="10" cy="5" rx="10" ry="5"/>
+    <path d="M0 5 v14 c0 2.8 4.5 5 10 5 s10 -2.2 10 -5 v-14"/>
+  </g>
+  <text x="600" y="126" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1e293b">backend</text>
+  <text x="600" y="144" text-anchor="middle" font-size="9.5" fill="#64748b">sees transformed</text>
+  <text x="600" y="156" text-anchor="middle" font-size="9.5" fill="#64748b">request</text>
+
+  <!-- response arrow back -->
+  <path d="M540 196 L330 196" stroke="#059669" stroke-width="2" fill="none" marker-end="url(#arr6g)"/>
+  <text x="435" y="188" text-anchor="middle" font-size="10" fill="#059669">response flows back through</text>
+
+  <!-- stage 3: JavaScript -->
+  <rect x="120" y="200" width="180" height="84" rx="10" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+  <g transform="translate(136,214)" stroke="#047857" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 2 L0 10 L8 18"/>
+    <path d="M18 2 L26 10 L18 18"/>
+  </g>
+  <text x="176" y="228" font-size="12.5" font-weight="700" fill="#1e293b">JavaScript</text>
+  <text x="136" y="250" font-size="10" fill="#64748b">reshape response.content,</text>
+  <text x="136" y="264" font-size="10" fill="#64748b">read/write any flow variable</text>
+  <text x="136" y="278" font-size="9.5" fill="#047857">Rhino ES5 — logic XML can't express</text>
+
+  <path d="M120 242 L92 242" stroke="#059669" stroke-width="2" marker-end="url(#arr6g)"/>
+  <rect x="20" y="225" width="70" height="34" rx="8" fill="#ecfdf5" stroke="#34d399" stroke-width="1.5"/>
+  <text x="55" y="247" text-anchor="middle" font-size="11.5" font-weight="600" fill="#065f46">response</text>
+</svg>

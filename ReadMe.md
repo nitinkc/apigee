@@ -1,0 +1,3 @@
+
+uvx --with mkdocs-material mkdocs serve
+
